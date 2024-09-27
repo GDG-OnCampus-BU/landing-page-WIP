@@ -1,4 +1,4 @@
 export default function EventsPage() {
-    return <h1>GDG Home</h1>;
+    return <h1></h1>;
   }
   

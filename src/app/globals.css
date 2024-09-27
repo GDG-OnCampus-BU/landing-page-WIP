@@ -25,3 +25,31 @@ body {
     text-wrap: balance;
   }
 }
+
+/* Loading screen styling */
+.loading-screen {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--background);
+  z-index: 100;
+}
+
+.loading-logo {
+  animation: spin 2s linear infinite;
+}
+
+/* Spinning animation */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.spin-animation {
+  animation: spin 2s linear infinite;
+}
