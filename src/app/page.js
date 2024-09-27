@@ -1,10 +1,10 @@
-"use client"; // Mark this component as a Client Component
+"use client"; 
 
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
 
-// Hides the navbar when this page is rendered
+
 const hideNavbar = () => {
   if (typeof window !== "undefined") {
     const navbar = document.querySelector("nav");
@@ -16,10 +16,10 @@ export default function Home() {
   const router = useRouter();
 
   useEffect(() => {
-    // Hides the navbar when this component mounts
+  
     hideNavbar();
 
-    // Show the navbar when component unmounts or on page leave
+    
     return () => {
       const navbar = document.querySelector("nav");
       if (navbar) navbar.style.display = "flex";
@@ -40,7 +40,7 @@ export default function Home() {
       </button>
 
       <Image
-  src="/assets/image1.png" // Make sure this is the correct path
+  src="/assets/image1.png" 
   alt="GDG BU Logo"
   width={900}
   height={1100}

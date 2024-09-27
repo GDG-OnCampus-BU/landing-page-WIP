@@ -49,24 +49,24 @@ export default function RootLayout({ children }) {
 const styles = {
   nav: {
     display: 'flex',
-    justifyContent: 'space-between', // Ensures space between logo and links
-    alignItems: 'center', // Vertically center the content
+    justifyContent: 'space-between', 
+    alignItems: 'center', 
     padding: '1rem',
-    background: 'transparent', // Makes the background transparent
+    background: 'transparent', 
     color: '#fff',
   },
   logoContainer: {
-    flex: '0 1 auto', // Adjust logo sizing as needed
+    flex: '0 1 auto', 
   },
   logo: {
-    width: '240px', // Adjust the size of the logo
+    width: '240px', 
     height: 'auto',
   },
   linksContainer: {
-    flex: '1 1 auto', // Space for links
+    flex: '1 1 auto', 
     display: 'flex',
-    justifyContent: 'flex-end', // Align links to the right
-    gap: '2rem', // Space between the links
+    justifyContent: 'flex-end', 
+    gap: '2rem', 
   },
   link: {
     color: '#fff',
