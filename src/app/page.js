@@ -1,9 +1,7 @@
-"use client"; 
+"use client";
 
-import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
-
 
 const hideNavbar = () => {
   if (typeof window !== "undefined") {
@@ -16,10 +14,8 @@ export default function Home() {
   const router = useRouter();
 
   useEffect(() => {
-  
     hideNavbar();
 
-    
     return () => {
       const navbar = document.querySelector("nav");
       if (navbar) navbar.style.display = "flex";
@@ -27,8 +23,16 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen p-8 pb-20 gap-8 sm:p-20 text-center">
-      <h1 className="text-4xl sm:text-5xl font-bold">
+    <div
+      className="flex flex-col items-center justify-center min-h-screen p-8 pb-20 gap-8 sm:p-20 text-center"
+      style={{
+        backgroundImage: `url('/assets/image1.png')`, 
+        backgroundSize: 'contain',
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'bottom',
+      }}
+    >
+      <h1 className="text-4xl sm:text-5xl font-bold text-white">
         We are GDG-BU
       </h1>
 
@@ -38,14 +42,6 @@ export default function Home() {
       >
         Discover More
       </button>
-
-      <Image
-  src="/assets/image1.png" 
-  alt="GDG BU Logo"
-  width={900}
-  height={1100}
-/>
-
     </div>
   );
 }
