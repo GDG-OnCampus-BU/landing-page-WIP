@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint && eslint .",
+    "prettier": "prettier --check ."
   },
   "dependencies": {
     "@emotion/react": "^11.13.3",
@@ -18,6 +19,8 @@
   },
   "devDependencies": {
     "eslint": "^8.57.1",
+    "eslint-plugin-prettier": "5.2.1",
+    "esling-config-prettier": "9.1.0", 
     "eslint-config-next": "14.2.13",
     "postcss": "^8",
     "prettier": "^3.3.3",
