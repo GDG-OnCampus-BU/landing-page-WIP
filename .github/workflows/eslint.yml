@@ -38,7 +38,3 @@ jobs:
           SARIF_ESLINT_IGNORE_SUPPRESSED: "true"
         run: npx eslint .
         continue-on-error: true
-
-        with:
-          sarif_file: eslint-results.sarif
-          wait-for-processing: true
