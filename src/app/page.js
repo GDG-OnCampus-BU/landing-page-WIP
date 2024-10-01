@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
-
+import Image from "next/image";
 const hideNavbar = () => {
   if (typeof window !== "undefined") {
     const navbar = document.querySelector("nav");
@@ -43,10 +43,11 @@ export default function Home() {
             href="https://flowbite.com/"
             class="flex items-center space-x-3 rtl:space-x-reverse"
           >
-            <img
+            <Image
               src="https://flowbite.com/docs/images/logo.svg"
-              className="h-8"
               alt="Flowbite Logo"
+              width={32}
+              height={32}
             />
             <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
               Flowbite
