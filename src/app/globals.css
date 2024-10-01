@@ -55,20 +55,20 @@ body {
 }
 @keyframes dots {
   0% {
-    content: '';
+    content: "";
   }
   33% {
-    content: '.';
+    content: ".";
   }
   66% {
-    content: '..';
+    content: "..";
   }
   100% {
-    content: '...';
+    content: "...";
   }
 }
 .animate-dots::after {
-  content: '...';
+  content: "...";
   display: inline-block;
   animation: dots 1.5s steps(3, end) infinite;
 }

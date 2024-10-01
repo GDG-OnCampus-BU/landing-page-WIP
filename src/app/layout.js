@@ -1,4 +1,4 @@
-'use client'; // Required for using React hooks on client-side
+"use client"; // Required for using React hooks on client-side
 
 import { useState, useEffect } from "react";
 import localFont from "next/font/local";
@@ -28,18 +28,13 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-    <div className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-      
-        {isLoading ? (
-          <Loader/>
-        ) : (
-          <>
-            {children}
-          </>
-        )}
+        <div
+          className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        >
+          {isLoading ? <Loader /> : <>{children}</>}
         </div>
-        </body>
-        </html>
+      </body>
+    </html>
   );
 }
 
