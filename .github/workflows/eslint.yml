@@ -42,5 +42,5 @@ jobs:
         run: npx eslint .
         continue-on-error: true
 
-      - name: Run Prettier:
+      - name: Run Prettier
         run: npm rum prettier -- --check .
