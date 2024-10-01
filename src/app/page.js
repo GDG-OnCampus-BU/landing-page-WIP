@@ -158,7 +158,7 @@ export default function Home() {
           Welcome to the next section!
         </h2>
         <p className="text-lg sm:text-xl text-gray-600">
-          Here's more information about GDG-BU and what we do.
+          Here&apos;s more information about GDG-BU and what we do.
         </p>
       </div>
     </>
