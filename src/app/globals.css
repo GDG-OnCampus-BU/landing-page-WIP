@@ -53,3 +53,32 @@ body {
 .spin-animation {
   animation: spin 2s linear infinite;
 }
+@keyframes dots {
+  0% {
+    content: '';
+  }
+  33% {
+    content: '.';
+  }
+  66% {
+    content: '..';
+  }
+  100% {
+    content: '...';
+  }
+}
+.animate-dots::after {
+  content: '...';
+  display: inline-block;
+  animation: dots 1.5s steps(3, end) infinite;
+}
+/* 
+module.exports = {
+  theme: {
+    extend: {
+      animation: {
+        'dots': 'dots 1.5s steps(3, end) infinite', // Animation for the dots
+      },
+    },
+  },
+}; */

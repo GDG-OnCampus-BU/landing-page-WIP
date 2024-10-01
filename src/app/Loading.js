@@ -26,8 +26,8 @@ export default function LoadingScreen() {
         <Image
           src="/assets/logo_gdg.png" 
           alt="GDG Logo"
-          width={200} 
-          height={200}
+          width={50}
+          height={25}
         />
       </div>
     </div>

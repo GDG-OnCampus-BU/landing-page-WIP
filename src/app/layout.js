@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import localFont from "next/font/local";
 import "./globals.css";
+import Loader from "@/components/Loader";
 
 const geistSans = localFont({
   src: "../../public/fonts/GeistVF.woff",
@@ -30,15 +31,7 @@ export default function RootLayout({ children }) {
     <div className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
       
         {isLoading ? (
-          <div style={styles.loadingScreen}>
-            <img
-              src="/assets/logo_gdg.png" // GDG Logo
-              alt="Loading..."
-              style={styles.loadingLogo}
-              className="spin-animation" // Added class for animation
-            />
-            <h1 style={styles.loadingText}>Loading GDG Site...</h1>
-          </div>
+          <Loader/>
         ) : (
           <>
             {children}
