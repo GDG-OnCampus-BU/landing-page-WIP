@@ -1,19 +1,18 @@
 "use client";
 
 import Navbar from "@/components/Navbar";
-
+import Links from "../components/Links";
 export default function Home() {
-
-
   // Function to scroll to the section
   const scrollToSection = () => {
     const section = document.getElementById("more-section");
     if (section) {
       section.scrollIntoView({ behavior: "smooth" });
-      setTimeout(() => {  // this method is used to move down the nav when clicked on button.
+      setTimeout(() => {
+        // this method is used to move down the nav when clicked on button.
         window.scrollBy({
           top: -1,
-          behavior: "smooth"
+          behavior: "smooth",
         });
       }, 600);
     }
@@ -21,7 +20,7 @@ export default function Home() {
 
   return (
     <>
-     <Navbar/>
+      <Navbar />
       {/* First Section */}
       <div
         className="flex flex-col items-center justify-center min-h-screen p-8 pb-20 gap-8 sm:p-20 text-center"
@@ -52,6 +51,7 @@ export default function Home() {
         <h2 className="text-3xl sm:text-4xl font-bold text-gray-800">
           Welcome to the next section!
         </h2>
+        <Links></Links>
         <p className="text-lg sm:text-xl text-gray-600">
           Here&apos;s more information about GDG-BU and what we do.
         </p>
