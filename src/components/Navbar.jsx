@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 
-
-export default function  Navbar () {
+export default function Navbar() {
   const [visible, setVisible] = useState(false);
   const [scrollPosition, setScrollPosition] = useState(0);
 
@@ -36,11 +35,11 @@ export default function  Navbar () {
             className="flex items-center space-x-3 rtl:space-x-reverse"
           >
             <Image
-            src="/assets/logo_gdg.png"  // Corrected path
-            alt="GDG Logo"
-           width={32}
-            height={32}
-              />
+              src="/assets/logo_gdg.png" // Corrected path
+              alt="GDG Logo"
+              width={32}
+              height={32}
+            />
 
             <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
               GDG Bennett University
@@ -122,4 +121,4 @@ export default function  Navbar () {
       </nav>
     </>
   );
-};
+}

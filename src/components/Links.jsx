@@ -20,13 +20,15 @@ const hyperlinks = [
     name: "Junior Core Forms",
     href: "https://forms.gle/AGnZKZiE1SjMPLpw8",
     icon: <TbListDetails className="w-8 h-8 text-violet-400" />,
-    bgcolor: "text-violet-400 border-2 border-violet-400 hover:bg-violet-400/15",
+    bgcolor:
+      "text-violet-400 border-2 border-violet-400 hover:bg-violet-400/15",
   },
   {
     name: "Whatsapp",
     href: "https://chat.whatsapp.com/Coiz2mWaHIQJs1c91jrYsB",
     icon: <FaWhatsapp className="w-8 h-8 text-emerald-400" />,
-    bgcolor: "text-emerald-400 border-2 border-emerald-400 hover:bg-emerald-400/15",
+    bgcolor:
+      "text-emerald-400 border-2 border-emerald-400 hover:bg-emerald-400/15",
   },
   {
     name: "Instagram",
@@ -74,7 +76,9 @@ const Link = ({ name, href, icon, bgcolor }) => {
         className={`${bgcolor} bg-transparent hover:scale-110 transform translate duration-300 ease-in-out w-80 justify-between md:w-fit min-h-fit py-4 flex md:justify-around gap-x-6 items-center px-5 rounded-2xl`}
       >
         {icon}
-        <p className={`text-lg text-nowrap md:text-xl lg:text-2xl font-medium block md:hidden lg:block`}>
+        <p
+          className={`text-lg text-nowrap md:text-xl lg:text-2xl font-medium block md:hidden lg:block`}
+        >
           {name}
         </p>
       </div>
