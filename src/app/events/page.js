@@ -56,6 +56,30 @@ const eventsData = [
     shortDesc: "Hands-on workshop covering modern web development techniques and best practices.",
     communityLink: "https://community.dev/web-dev-workshop"
   },
+  {
+    name: "Gen AI Study Jams",
+    poster: "https://via.placeholder.com/400x200.png?text=Gen+AI+Study+Jams",
+    shortDesc: "An event about AI that explores the latest developments in generative AI technologies.",
+    communityLink: "https://community.dev/genai-study-jams"
+  },
+  {
+    name: "Web Dev Workshop",
+    poster: "https://via.placeholder.com/400x200.png?text=Web+Dev+Workshop",
+    shortDesc: "Hands-on workshop covering modern web development techniques and best practices.",
+    communityLink: "https://community.dev/web-dev-workshop"
+  },
+  {
+    name: "Gen AI Study Jams",
+    poster: "https://via.placeholder.com/400x200.png?text=Gen+AI+Study+Jams",
+    shortDesc: "An event about AI that explores the latest developments in generative AI technologies.",
+    communityLink: "https://community.dev/genai-study-jams"
+  },
+  {
+    name: "Web Dev Workshop",
+    poster: "https://via.placeholder.com/400x200.png?text=Web+Dev+Workshop",
+    shortDesc: "Hands-on workshop covering modern web development techniques and best practices.",
+    communityLink: "https://community.dev/web-dev-workshop"
+  },
   // Add more events as needed
 ];
 
