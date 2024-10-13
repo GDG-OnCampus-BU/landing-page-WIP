@@ -1,69 +1,24 @@
 "use client";
 
+import { useEffect, useState } from "react"; // Import useEffect and useState
 import Navbar from "@/components/Navbar";
 import EventsSection from "@/components/EventsSection"; // Import EventsSection, which includes EventCard and Events
 import Links from "@/components/Links"; // If you have Links component
 
-// Mock event data for the EventCard component
-const eventsData = [
-  {
-    name: "Gen AI Study Jams",
-    poster: "https://via.placeholder.com/400x200.png?text=Gen+AI+Study+Jams",
-    shortDesc:
-      "An event about AI that explores the latest developments in generative AI technologies.",
-    communityLink: "https://community.dev/genai-study-jams",
-  },
-  {
-    name: "Web Dev Workshop",
-    poster: "https://via.placeholder.com/400x200.png?text=Web+Dev+Workshop",
-    shortDesc:
-      "Hands-on workshop covering modern web development techniques and best practices.",
-    communityLink: "https://community.dev/web-dev-workshop",
-  },
-  {
-    name: "Gen AI Study Jams",
-    poster: "https://via.placeholder.com/400x200.png?text=Gen+AI+Study+Jams",
-    shortDesc:
-      "An event about AI that explores the latest developments in generative AI technologies.",
-    communityLink: "https://community.dev/genai-study-jams",
-  },
-  {
-    name: "Web Dev Workshop",
-    poster: "https://via.placeholder.com/400x200.png?text=Web+Dev+Workshop",
-    shortDesc:
-      "Hands-on workshop covering modern web development techniques and best practices.Hands-on workshop covering modern web development",
-    communityLink: "https://community.dev/web-dev-workshop",
-  },
-  {
-    name: "Gen AI Study Jams",
-    poster: "https://via.placeholder.com/400x200.png?text=Gen+AI+Study+Jams",
-    shortDesc:
-      "An event about AI that explores the latest developments in generative AI technologies.",
-    communityLink: "https://community.dev/genai-study-jams",
-  },
-  {
-    name: "Web Dev Workshop",
-    poster: "https://via.placeholder.com/400x200.png?text=Web+Dev+Workshop",
-    shortDesc:
-      "Hands-on workshop covering modern web development techniques and best practices.",
-    communityLink: "https://community.dev/web-dev-workshop",
-  },{
-    name: "Gen AI Study Jams",
-    poster: "https://via.placeholder.com/400x200.png?text=Gen+AI+Study+Jams",
-    shortDesc:
-      "An event about AI that explores the latest developments in generative AI technologies.",
-    communityLink: "https://community.dev/genai-study-jams",
-  },
-  {
-    name: "Web Dev Workshop",
-    poster: "https://via.placeholder.com/400x200.png?text=Web+Dev+Workshop",
-    shortDesc:
-      "Hands-on workshop covering modern web development techniques and best practices.",
-    communityLink: "https://community.dev/web-dev-workshop",
-  },
-];
-
 export default function Home() {
+  const [eventsData, setEventsData] = useState([]); // State to hold events data
+
+  // Function to fetch events data from the JSON file
+  useEffect(() => {
+    const fetchEventsData = async () => {
+      const response = await fetch("/data/events.json"); // Adjust the path to your JSON file
+      const data = await response.json();
+      setEventsData(data);
+    };
+    
+    fetchEventsData();
+  }, []);
+
   // Function to scroll to the second section
   const scrollToSection = () => {
     const section = document.getElementById("more-section");
@@ -121,4 +76,3 @@ export default function Home() {
     </>
   );
 }
-  
