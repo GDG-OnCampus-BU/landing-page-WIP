@@ -36,13 +36,14 @@ export default function  Navbar () {
             className="flex items-center space-x-3 rtl:space-x-reverse"
           >
             <Image
-              src="https://flowbite.com/docs/images/logo.svg"
-              alt="Flowbite Logo"
-              width={32}
-              height={32}
-            />
+            src="/assets/logo_gdg.png"  // Corrected path
+            alt="GDG Logo"
+           width={32}
+            height={32}
+              />
+
             <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-              Flowbite
+              GDG Bennett University
             </span>
           </a>
           <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
