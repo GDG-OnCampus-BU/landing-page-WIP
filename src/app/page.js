@@ -1,15 +1,75 @@
 "use client";
 
 import Navbar from "@/components/Navbar";
-import Links from "../components/Links";
+import EventsSection from "@/components/EventsSection"; // Import EventsSection, which includes EventCard and Events
+import Links from "@/components/Links"; // If you have Links component
+
+// Mock event data for the EventCard component
+const eventsData = [
+  {
+    name: "Gen AI Study Jams",
+    poster: "https://via.placeholder.com/400x200.png?text=Gen+AI+Study+Jams",
+    shortDesc:
+      "An event about AI that explores the latest developments in generative AI technologies.",
+    communityLink: "https://community.dev/genai-study-jams",
+  },
+  {
+    name: "Web Dev Workshop",
+    poster: "https://via.placeholder.com/400x200.png?text=Web+Dev+Workshop",
+    shortDesc:
+      "Hands-on workshop covering modern web development techniques and best practices.",
+    communityLink: "https://community.dev/web-dev-workshop",
+  },
+  {
+    name: "Gen AI Study Jams",
+    poster: "https://via.placeholder.com/400x200.png?text=Gen+AI+Study+Jams",
+    shortDesc:
+      "An event about AI that explores the latest developments in generative AI technologies.",
+    communityLink: "https://community.dev/genai-study-jams",
+  },
+  {
+    name: "Web Dev Workshop",
+    poster: "https://via.placeholder.com/400x200.png?text=Web+Dev+Workshop",
+    shortDesc:
+      "Hands-on workshop covering modern web development techniques and best practices.",
+    communityLink: "https://community.dev/web-dev-workshop",
+  },
+  {
+    name: "Gen AI Study Jams",
+    poster: "https://via.placeholder.com/400x200.png?text=Gen+AI+Study+Jams",
+    shortDesc:
+      "An event about AI that explores the latest developments in generative AI technologies.",
+    communityLink: "https://community.dev/genai-study-jams",
+  },
+  {
+    name: "Web Dev Workshop",
+    poster: "https://via.placeholder.com/400x200.png?text=Web+Dev+Workshop",
+    shortDesc:
+      "Hands-on workshop covering modern web development techniques and best practices.",
+    communityLink: "https://community.dev/web-dev-workshop",
+  },{
+    name: "Gen AI Study Jams",
+    poster: "https://via.placeholder.com/400x200.png?text=Gen+AI+Study+Jams",
+    shortDesc:
+      "An event about AI that explores the latest developments in generative AI technologies.",
+    communityLink: "https://community.dev/genai-study-jams",
+  },
+  {
+    name: "Web Dev Workshop",
+    poster: "https://via.placeholder.com/400x200.png?text=Web+Dev+Workshop",
+    shortDesc:
+      "Hands-on workshop covering modern web development techniques and best practices.",
+    communityLink: "https://community.dev/web-dev-workshop",
+  },
+];
+
 export default function Home() {
-  // Function to scroll to the section
+  // Function to scroll to the second section
   const scrollToSection = () => {
     const section = document.getElementById("more-section");
     if (section) {
       section.scrollIntoView({ behavior: "smooth" });
       setTimeout(() => {
-        // this method is used to move down the nav when clicked on button.
         window.scrollBy({
           top: -1,
           behavior: "smooth",
@@ -20,7 +80,9 @@ export default function Home() {
 
   return (
     <>
+      {/* Navbar */}
       <Navbar />
+
       {/* First Section */}
       <div
         className="flex flex-col items-center justify-center min-h-screen p-8 pb-20 gap-8 sm:p-20 text-center"
@@ -48,13 +110,13 @@ export default function Home() {
         id="more-section"
         className="flex flex-col items-center justify-center min-h-screen p-8 pb-20 gap-8 sm:p-20 text-center"
       >
-        <h2 className="text-3xl sm:text-4xl font-bold text-gray-800">
-          Welcome to the next section!
-        </h2>
-        <Links></Links>
-        <p className="text-lg sm:text-xl text-gray-600">
-          Here&apos;s more information about GDG-BU and what we do.
-        </p>
+        {/* EventsSection component - Renders event cards */}
+        <EventsSection events={eventsData} />
+      </div>
+
+      {/* Links Section */}
+      <div className="bg-gray-900 py-12">
+        <Links />
       </div>
     </>
   );
