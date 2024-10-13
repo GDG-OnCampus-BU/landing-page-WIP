@@ -25,6 +25,16 @@ body {
     text-wrap: balance;
   }
 }
+/* Add this in your CSS file */
+.no-scrollbar::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none; /* Internet Explorer and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
 
 /* Loading screen styling */
 .loading-screen {
