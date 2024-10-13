@@ -7,7 +7,8 @@ const EventsSection = ({ events }) => {
 
   // Check if the window width is less than a certain value to determine mobile view
   const handleResize = () => {
-    if (window.innerWidth < 768) { // Mobile breakpoint
+    if (window.innerWidth < 768) {
+      // Mobile breakpoint
       setIsMobile(true);
       setVisibleEvents(3); // Show 3 events on mobile
     } else {
@@ -31,14 +32,17 @@ const EventsSection = ({ events }) => {
   };
 
   return (
-    <div className="bg-black py-12 w-full"> {/* Full-width black background */}
+    <div className="bg-black py-12 w-full">
+      {" "}
+      {/* Full-width black background */}
       <h2 className="text-4xl font-bold text-white text-center mb-12">
         Events
       </h2>
-      
       {/* Event cards area with full width and responsive grid */}
       <div className="flex justify-center">
-        <div className="max-w-screen-xl w-full px-4"> {/* Maximum width set with full padding */}
+        <div className="max-w-screen-xl w-full px-4">
+          {" "}
+          {/* Maximum width set with full padding */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {events.slice(0, visibleEvents).map((event, index) => (
               <EventCard key={index} event={event} />
@@ -46,7 +50,6 @@ const EventsSection = ({ events }) => {
           </div>
         </div>
       </div>
-
       {/* Load More Button */}
       {visibleEvents < events.length && (
         <div className="flex justify-center mt-8">
