@@ -10,7 +10,7 @@ const hyperlinks = [
     name: "Hacktoberfest'24 Repos",
     href: "https://github.com/GDG-OnCampus-BU/HacktoberFest/",
     icon: (
-      <p className="font-mono text-lime-400 font-bold w-8 h-8 text-3xl text-center align-middle bg-transparent italic">
+      <p className="w-8 h-8 font-mono text-3xl italic font-bold text-center align-middle bg-transparent text-lime-400">
         H
       </p>
     ),
@@ -40,7 +40,7 @@ const hyperlinks = [
     name: "Community.dev",
     href: "https://gdg.community.dev/gdg-on-campus-bennett-university-greater-noida-india/",
     icon: (
-      <p className="font-mono text-sky-400 font-bold w-8 h-8 text-3xl bg-transparent  flex justify-center items-center">
+      <p className="flex items-center justify-center w-8 h-8 font-mono text-3xl font-bold bg-transparent text-sky-400">
         &lt;&gt;
       </p>
     ),
@@ -49,7 +49,8 @@ const hyperlinks = [
 ];
 const Links = () => {
   return (
-    <div className="flex md:flex-row md:justify-around flex-col items-center p-4 gap-8">
+    <>
+    <div className="flex flex-col items-center gap-8 p-4 md:flex-row md:justify-around">
       {hyperlinks.map((link, index) => {
         return (
           <Link
@@ -62,6 +63,7 @@ const Links = () => {
         );
       })}
     </div>
+    </>
   );
 };
 
@@ -69,17 +71,21 @@ export default Links;
 
 const Link = ({ name, href, icon, bgcolor }) => {
   return (
-    <a href={href} target="_blank">
+    <a href={href} target="_blank" className="w-full max-w-xs">
       <div
-        className={` ${bgcolor} bg-transparent hover:scale-110  transform translate duration-300 ease-in-out  w-80 justify-between md:w-fit min-h-fit py-4 flex md:justify-around gap-x-6 items-center px-5 py- rounded-2xl`}
+        className={` ${bgcolor} bg-transparent hover:scale-110  transform translate duration-300 ease-in-out  w-80 justify-between md:w-fit min-h-fit py-4 flex flex-col md:justify-around gap-x-6 items-center px-5 py- rounded-2xl`}
       >
+        <div className="flex items-center justify-center h-14 w-14">
         {icon}
+        </div>
         <p
           className={` text-lg text-nowrap md:text-xl lg:text-2xl font-medium block md:hidden lg:block`}
         >
           {name}
         </p>
       </div>
+      <div className="w-1 h-8 mx-auto bg-gray-300"></div>
+      <div className={` w-full h-1 ${bgcolor} `}></div>
     </a>
   );
 };
