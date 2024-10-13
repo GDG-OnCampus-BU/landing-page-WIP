@@ -1,7 +1,9 @@
 "use client";
 
+import React, { useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import Links from "../components/Links";
+
 export default function Home() {
   // Function to scroll to the section
   const scrollToSection = () => {
@@ -9,7 +11,7 @@ export default function Home() {
     if (section) {
       section.scrollIntoView({ behavior: "smooth" });
       setTimeout(() => {
-        // this method is used to move down the nav when clicked on button.
+        // Adjusts the scroll position slightly after the scroll
         window.scrollBy({
           top: -1,
           behavior: "smooth",
@@ -17,6 +19,12 @@ export default function Home() {
       }, 600);
     }
   };
+
+  // Ensure the DOM is accessible after mounting
+  useEffect(() => {
+    const section = document.getElementById("more-section");
+    // You can add logic here if needed for the section element
+  }, []);
 
   return (
     <>
@@ -51,7 +59,7 @@ export default function Home() {
         <h2 className="text-3xl sm:text-4xl font-bold text-gray-800">
           Welcome to the next section!
         </h2>
-        <Links></Links>
+        <Links />
         <p className="text-lg sm:text-xl text-gray-600">
           Here&apos;s more information about GDG-BU and what we do.
         </p>
