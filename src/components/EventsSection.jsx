@@ -1,37 +1,63 @@
-import React, { useState } from "react";
-import Events from "./Events";
+import { useState, useEffect } from "react";
+import EventCard from "./EventCard";
 
 const EventsSection = ({ events }) => {
-  // State to track how many events are shown initially
-  const [visibleEvents, setVisibleEvents] = useState(6);
+  const [visibleEvents, setVisibleEvents] = useState(6); // Default for desktop
+  const [isMobile, setIsMobile] = useState(false);
 
-  // Function to load more events
+  // Check if the window width is less than a certain value to determine mobile view
+  const handleResize = () => {
+    if (window.innerWidth < 768) { // Mobile breakpoint
+      setIsMobile(true);
+      setVisibleEvents(3); // Show 3 events on mobile
+    } else {
+      setIsMobile(false);
+      setVisibleEvents(6); // Show 6 events on desktop
+    }
+  };
+
+  useEffect(() => {
+    handleResize(); // Check the size on component mount
+    window.addEventListener("resize", handleResize); // Attach event listener
+
+    // Cleanup event listener on component unmount
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   const loadMoreEvents = () => {
-    setVisibleEvents((prev) => prev + 6); // Load 6 more events
+    setVisibleEvents((prevVisible) => prevVisible + (isMobile ? 3 : 6)); // Load 3 more for mobile, 6 for desktop
   };
 
   return (
-    <div className="bg-gray-900 py-12">
-      <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold text-white text-center mb-12">
-          Upcoming Events
-        </h2>
-
-        {/* Render the Events component with only the visible events */}
-        <Events events={events.slice(0, visibleEvents)} />
-
-        {/* Display the "Next" arrow if there are more events to show */}
-        {visibleEvents < events.length && (
-          <div className="flex justify-center mt-8">
-            <button
-              onClick={loadMoreEvents}
-              className="bg-transparent hover:bg-blue-500 text-white font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded transition duration-300"
-            >
-              &#x2193; Load More
-            </button>
+    <div className="bg-black py-12 w-full"> {/* Full-width black background */}
+      <h2 className="text-4xl font-bold text-white text-center mb-12">
+        Events
+      </h2>
+      
+      {/* Event cards area with full width and responsive grid */}
+      <div className="flex justify-center">
+        <div className="max-w-screen-xl w-full px-4"> {/* Maximum width set with full padding */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {events.slice(0, visibleEvents).map((event, index) => (
+              <EventCard key={index} event={event} />
+            ))}
           </div>
-        )}
+        </div>
       </div>
+
+      {/* Load More Button */}
+      {visibleEvents < events.length && (
+        <div className="flex justify-center mt-8">
+          <button
+            onClick={loadMoreEvents}
+            className="flex items-center gap-2 bg-gradient-to-r from-gray-700 to-gray-900 text-white py-3 px-6 rounded-full shadow-lg hover:shadow-2xl transition duration-300 transform hover:scale-105"
+          >
+            &#x2193; Load More Events
+          </button>
+        </div>
+      )}
     </div>
   );
 };

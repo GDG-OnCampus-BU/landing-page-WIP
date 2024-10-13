@@ -31,7 +31,7 @@ const eventsData = [
     name: "Web Dev Workshop",
     poster: "https://via.placeholder.com/400x200.png?text=Web+Dev+Workshop",
     shortDesc:
-      "Hands-on workshop covering modern web development techniques and best practices.",
+      "Hands-on workshop covering modern web development techniques and best practices.Hands-on workshop covering modern web development",
     communityLink: "https://community.dev/web-dev-workshop",
   },
   {
@@ -108,7 +108,7 @@ export default function Home() {
       {/* Second Section */}
       <div
         id="more-section"
-        className="flex flex-col items-center justify-center min-h-screen p-8 pb-20 gap-8 sm:p-20 text-center"
+        className="flex flex-col items-center justify-center min-h-screen p-8 pb-20 gap-8 sm:p-50 text-center"
       >
         {/* EventsSection component - Renders event cards */}
         <EventsSection events={eventsData} />
@@ -121,3 +121,4 @@ export default function Home() {
     </>
   );
 }
+  
