@@ -32,14 +32,14 @@ export default function Home() {
         }}
       >
         <h1 className="text-4xl sm:text-5xl font-bold text-white">
-          We are GDG-BU
+          Mummy kaisi h???
         </h1>
 
         <button
           onClick={scrollToSection}
           className="rounded-full border border-solid border-transparent bg-foreground text-background hover:bg-[#383838] dark:hover:bg-[#ccc] text-lg sm:text-xl h-12 sm:h-14 px-6 sm:px-8 transition-colors"
         >
-          Discover More
+          CLICK TO KNOW MORE
         </button>
       </div>
 
@@ -49,11 +49,11 @@ export default function Home() {
         className="flex flex-col items-center justify-center min-h-screen p-8 pb-20 gap-8 sm:p-20 text-center"
       >
         <h2 className="text-3xl sm:text-4xl font-bold text-gray-800">
-          Welcome to the next section!
+          MERI BAAGI MERA GHODA JISNE FOLLOW NHI KIYA USKI MAA KA.....!
         </h2>
         <Links></Links>
         <p className="text-lg sm:text-xl text-gray-600">
-          Here&apos;s more information about GDG-BU and what we do.
+          Here&apos;s more to know about me follow me on insta-@boynamedtanu.
         </p>
       </div>
     </>
