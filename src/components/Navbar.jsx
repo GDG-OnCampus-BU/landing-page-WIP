@@ -46,12 +46,13 @@ export default function  Navbar () {
             </span>
           </a>
           <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-            <button
-              type="button"
-              className="text-white  hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover: dark:focus:ring-blue-800"
-            >
-              Get started
-            </button>
+          <button
+  type="button"
+  className="text-black text-lg border-2 border-gray-500 hover:bg-zinc-800 focus:ring-4 focus:outline-none focus:ring-zinc-300 font-medium rounded-lg text-sm  px-4 py-2 text-center bg-white hover:border-zinc-900 dark:bg-zinc-600 dark:hover:bg-zinc-700 dark:focus:ring-zinc-800"
+>
+  Get Started
+</button>
+
             <button
               data-collapse-toggle="navbar-sticky"
               type="button"
