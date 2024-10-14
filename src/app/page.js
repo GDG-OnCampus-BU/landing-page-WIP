@@ -32,7 +32,7 @@ export default function Home() {
         }}
       >
         <h1 className="text-4xl sm:text-5xl font-bold text-white">
-          We are GDG-BU
+          hello
         </h1>
 
         <button
@@ -49,7 +49,7 @@ export default function Home() {
         className="flex flex-col items-center justify-center min-h-screen p-8 pb-20 gap-8 sm:p-20 text-center"
       >
         <h2 className="text-3xl sm:text-4xl font-bold text-gray-800">
-          Welcome to the next section!
+          hello
         </h2>
         <Links></Links>
         <p className="text-lg sm:text-xl text-gray-600">
