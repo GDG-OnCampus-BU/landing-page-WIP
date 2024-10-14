@@ -17,7 +17,7 @@ const hyperlinks = [
     bgcolor: "text-lime-400 border-2 border-lime-400 hover:bg-lime-400/15",
   },
   {
-    name: "Junior Core Forms",
+    name: "Junior  Forms",
     href: "https://forms.gle/AGnZKZiE1SjMPLpw8",
     icon: <TbListDetails className="w-8 h-8 text-violet-400"></TbListDetails>,
     bgcolor:
