@@ -10,7 +10,7 @@ export default function  Navbar () {
     const handleScroll = () => {
       const currentScrollPos = window.scrollY;
 
-      if (currentScrollPos > scrollPosition) {
+      if (currentScrollPos > scrollPositnion) {
         setVisible(false); //scrolling down
       } else {
         setVisible(true); //scrolling up
