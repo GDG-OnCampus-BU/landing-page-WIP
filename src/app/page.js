@@ -11,7 +11,7 @@ export default function Home() {
       setTimeout(() => {
         // this method is used to move down the nav when clicked on button.
         window.scrollBy({
-          top: -1,
+          top: -2,
           behavior: "smooth",
         });
       }, 600);
@@ -31,15 +31,15 @@ export default function Home() {
           backgroundPosition: "bottom",
         }}
       >
-        <h1 className="text-4xl sm:text-5xl font-bold text-white">
-          We are GDG-BU
+        <h1 className="rounded-full border border-solid border-transparent bg-foreground text-background hover:bg-[#FF0000] dark:hover:bg-[#FF0000] text-lg sm:text-xl h-12 sm:h-14 px-6 sm:px-8 transition-colors">
+          GDG-BU
         </h1>
 
         <button
           onClick={scrollToSection}
-          className="rounded-full border border-solid border-transparent bg-foreground text-background hover:bg-[#383838] dark:hover:bg-[#ccc] text-lg sm:text-xl h-12 sm:h-14 px-6 sm:px-8 transition-colors"
+          className="rounded-full border border-solid border-transparent bg-foreground text-background hover:bg-[#FF0000] dark:hover:bg-[#FF0000] text-lg sm:text-xl h-12 sm:h-14 px-6 sm:px-8 transition-colors"
         >
-          Discover More
+          Discover++
         </button>
       </div>
 
@@ -49,7 +49,7 @@ export default function Home() {
         className="flex flex-col items-center justify-center min-h-screen p-8 pb-20 gap-8 sm:p-20 text-center"
       >
         <h2 className="text-3xl sm:text-4xl font-bold text-gray-800">
-          Welcome to the next section!
+          HUTTT
         </h2>
         <Links></Links>
         <p className="text-lg sm:text-xl text-gray-600">
