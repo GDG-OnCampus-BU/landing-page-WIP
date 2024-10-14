@@ -31,8 +31,8 @@ export default function Home() {
           backgroundPosition: "bottom",
         }}
       >
-        <h1 className="text-4xl sm:text-5xl font-bold text-white">
-          We are GDG-BU
+        <h1 className="text-4xl sm:text-5xl font-bold text-black">
+          Hacktober
         </h1>
 
         <button
