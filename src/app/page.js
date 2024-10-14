@@ -32,14 +32,14 @@ export default function Home() {
         }}
       >
         <h1 className="text-4xl sm:text-5xl font-bold text-white">
-          We are GDG-BU
+          Start Contributing 
         </h1>
 
         <button
           onClick={scrollToSection}
           className="rounded-full border border-solid border-transparent bg-foreground text-background hover:bg-[#383838] dark:hover:bg-[#ccc] text-lg sm:text-xl h-12 sm:h-14 px-6 sm:px-8 transition-colors"
         >
-          Discover More
+         Lets's  Go
         </button>
       </div>
 
