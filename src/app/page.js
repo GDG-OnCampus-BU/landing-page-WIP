@@ -48,11 +48,11 @@ export default function Home() {
         id="more-section"
         className="flex flex-col items-center justify-center min-h-screen p-8 pb-20 gap-8 sm:p-20 text-center"
       >
-        <h2 className="text-3xl sm:text-4xl font-bold text-gray-800">
-          Welcome to the next
+        <h2 className="text-3xl sm:text-4xl font-italic text-gray-800">
+          Welcome to the next Hacktober
         </h2>
         <Links></Links>
-        <p className="text-lg sm:text-xl text-gray-600">
+        <p className="text-lg sm:text-xl text-gray-400" postion:absolute>
           Here&apos;s more information about GDG-BU and what we do.
         </p>
       </div>
