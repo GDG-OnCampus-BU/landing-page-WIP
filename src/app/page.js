@@ -2,19 +2,19 @@
 
 import { useEffect, useState } from "react";
 import Navbar from "@/components/Navbar";
-import EventsSection from "@/components/EventsSection"; 
-import Links from "@/components/Links"; 
+import EventsSection from "@/components/EventsSection";
+import Links from "@/components/Links";
 
 export default function Home() {
-  const [eventsData, setEventsData] = useState([]); 
+  const [eventsData, setEventsData] = useState([]);
 
   useEffect(() => {
     const fetchEventsData = async () => {
-      const response = await fetch("/data/events.json"); 
+      const response = await fetch("/data/events.json");
       const data = await response.json();
       setEventsData(data);
     };
-    
+
     fetchEventsData();
   }, []);
 

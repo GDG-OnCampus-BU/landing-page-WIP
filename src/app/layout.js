@@ -1,4 +1,4 @@
-"use client"; 
+"use client";
 
 import { useState, useEffect } from "react";
 import localFont from "next/font/local";
@@ -22,7 +22,7 @@ export default function RootLayout({ children }) {
 
   useEffect(() => {
     const timeout = setTimeout(() => setIsLoading(false), 3000); // Simulated loading delay
-    return () => clearTimeout(timeout); 
+    return () => clearTimeout(timeout);
   }, []);
 
   return (
@@ -37,7 +37,6 @@ export default function RootLayout({ children }) {
     </html>
   );
 }
-
 
 const styles = {
   loadingScreen: {

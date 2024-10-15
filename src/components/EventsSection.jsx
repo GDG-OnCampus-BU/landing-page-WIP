@@ -2,23 +2,23 @@ import { useState, useEffect } from "react";
 import EventCard from "./EventCard";
 
 const EventsSection = ({ events }) => {
-  const [visibleEvents, setVisibleEvents] = useState(6); 
+  const [visibleEvents, setVisibleEvents] = useState(6);
   const [isMobile, setIsMobile] = useState(false);
 
   const handleResize = () => {
     if (window.innerWidth < 768) {
       // Mobile breakpoint
       setIsMobile(true);
-      setVisibleEvents(3); 
+      setVisibleEvents(3);
     } else {
       setIsMobile(false);
-      setVisibleEvents(6); 
+      setVisibleEvents(6);
     }
   };
 
   useEffect(() => {
-    handleResize(); 
-    window.addEventListener("resize", handleResize); 
+    handleResize();
+    window.addEventListener("resize", handleResize);
 
     return () => {
       window.removeEventListener("resize", handleResize);
@@ -26,7 +26,7 @@ const EventsSection = ({ events }) => {
   }, []);
 
   const loadMoreEvents = () => {
-    setVisibleEvents((prevVisible) => prevVisible + (isMobile ? 3 : 6)); 
+    setVisibleEvents((prevVisible) => prevVisible + (isMobile ? 3 : 6));
   };
 
   return (
