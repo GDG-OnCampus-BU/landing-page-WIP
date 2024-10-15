@@ -25,17 +25,16 @@ body {
     text-wrap: balance;
   }
 }
-/* Add this in your CSS file */
+
 .no-scrollbar::-webkit-scrollbar {
-  display: none; /* Safari and Chrome */
+  display: none; 
 }
 
 .no-scrollbar {
-  -ms-overflow-style: none; /* Internet Explorer and Edge */
-  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; 
+  scrollbar-width: none; 
 }
 
-/* Loading screen styling */
 .loading-screen {
   position: fixed;
   inset: 0;
@@ -50,7 +49,6 @@ body {
   animation: spin 2s linear infinite;
 }
 
-/* Spinning animation */
 @keyframes spin {
   from {
     transform: rotate(0deg);
@@ -81,13 +79,3 @@ body {
   display: inline-block;
   animation: dots 1.5s steps(3, end) infinite;
 }
-/* 
-module.exports = {
-  theme: {
-    extend: {
-      animation: {
-        'dots': 'dots 1.5s steps(3, end) infinite', // Animation for the dots
-      },
-    },
-  },
-}; */
