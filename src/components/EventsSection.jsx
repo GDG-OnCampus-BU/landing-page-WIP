@@ -2,47 +2,42 @@ import { useState, useEffect } from "react";
 import EventCard from "./EventCard";
 
 const EventsSection = ({ events }) => {
-  const [visibleEvents, setVisibleEvents] = useState(6); // Default for desktop
+  const [visibleEvents, setVisibleEvents] = useState(6); 
   const [isMobile, setIsMobile] = useState(false);
 
-  // Check if the window width is less than a certain value to determine mobile view
   const handleResize = () => {
     if (window.innerWidth < 768) {
       // Mobile breakpoint
       setIsMobile(true);
-      setVisibleEvents(3); // Show 3 events on mobile
+      setVisibleEvents(3); 
     } else {
       setIsMobile(false);
-      setVisibleEvents(6); // Show 6 events on desktop
+      setVisibleEvents(6); 
     }
   };
 
   useEffect(() => {
-    handleResize(); // Check the size on component mount
-    window.addEventListener("resize", handleResize); // Attach event listener
+    handleResize(); 
+    window.addEventListener("resize", handleResize); 
 
-    // Cleanup event listener on component unmount
     return () => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
 
   const loadMoreEvents = () => {
-    setVisibleEvents((prevVisible) => prevVisible + (isMobile ? 3 : 6)); // Load 3 more for mobile, 6 for desktop
+    setVisibleEvents((prevVisible) => prevVisible + (isMobile ? 3 : 6)); 
   };
 
   return (
     <div className="bg-black py-12 w-full">
       {" "}
-      {/* Full-width black background */}
       <h2 className="text-4xl font-bold text-white text-center mb-12">
         Events
       </h2>
-      {/* Event cards area with full width and responsive grid */}
       <div className="flex justify-center">
         <div className="max-w-screen-xl w-full px-4">
           {" "}
-          {/* Maximum width set with full padding */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {events.slice(0, visibleEvents).map((event, index) => (
               <EventCard key={index} event={event} />
@@ -50,7 +45,6 @@ const EventsSection = ({ events }) => {
           </div>
         </div>
       </div>
-      {/* Load More Button */}
       {visibleEvents < events.length && (
         <div className="flex justify-center mt-8">
           <button

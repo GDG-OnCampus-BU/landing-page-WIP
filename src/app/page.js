@@ -1,17 +1,16 @@
 "use client";
 
-import { useEffect, useState } from "react"; // Import useEffect and useState
+import { useEffect, useState } from "react";
 import Navbar from "@/components/Navbar";
-import EventsSection from "@/components/EventsSection"; // Import EventsSection, which includes EventCard and Events
-import Links from "@/components/Links"; // If you have Links component
+import EventsSection from "@/components/EventsSection"; 
+import Links from "@/components/Links"; 
 
 export default function Home() {
-  const [eventsData, setEventsData] = useState([]); // State to hold events data
+  const [eventsData, setEventsData] = useState([]); 
 
-  // Function to fetch events data from the JSON file
   useEffect(() => {
     const fetchEventsData = async () => {
-      const response = await fetch("/data/events.json"); // Adjust the path to your JSON file
+      const response = await fetch("/data/events.json"); 
       const data = await response.json();
       setEventsData(data);
     };
@@ -19,7 +18,6 @@ export default function Home() {
     fetchEventsData();
   }, []);
 
-  // Function to scroll to the second section
   const scrollToSection = () => {
     const section = document.getElementById("more-section");
     if (section) {
@@ -65,7 +63,6 @@ export default function Home() {
         id="more-section"
         className="flex flex-col items-center justify-center min-h-screen p-8 pb-20 gap-8 sm:p-50 text-center"
       >
-        {/* EventsSection component - Renders event cards */}
         <EventsSection events={eventsData} />
       </div>
 
