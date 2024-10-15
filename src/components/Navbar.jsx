@@ -10,9 +10,9 @@ export default function Navbar() {
       const currentScrollPos = window.scrollY;
 
       if (currentScrollPos > scrollPosition) {
-        setVisible(false); //scrolling down
+        setVisible(false); 
       } else {
-        setVisible(true); //scrolling up
+        setVisible(true);
       }
 
       setScrollPosition(currentScrollPos);
@@ -35,7 +35,7 @@ export default function Navbar() {
             className="flex items-center space-x-3 rtl:space-x-reverse"
           >
             <Image
-              src="/assets/logo_gdg.png" // Corrected path
+              src="/assets/logo_gdg.png" 
               alt="GDG Logo"
               width={32}
               height={32}

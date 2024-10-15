@@ -1,4 +1,4 @@
-"use client"; // Required for using React hooks on client-side
+"use client"; 
 
 import { useState, useEffect } from "react";
 import localFont from "next/font/local";
@@ -22,7 +22,7 @@ export default function RootLayout({ children }) {
 
   useEffect(() => {
     const timeout = setTimeout(() => setIsLoading(false), 3000); // Simulated loading delay
-    return () => clearTimeout(timeout); // Cleanup
+    return () => clearTimeout(timeout); 
   }, []);
 
   return (
@@ -38,7 +38,7 @@ export default function RootLayout({ children }) {
   );
 }
 
-// Styles for loading screen and navigation
+
 const styles = {
   loadingScreen: {
     display: "flex",

@@ -6,46 +6,11 @@
       "communityLink": "https://gdg.community.dev/events/details/google-gdg-on-campus-bennett-university-greater-noida-india-presents-hacktober-fest-bennett-university/"
     },
     {
-      "name": "Web Dev Workshop",
-      "poster": "https://via.placeholder.com/400x200.png?text=Web+Dev+Workshop",
+      "name": "Gen AI Study Jam - Info Session",
+      "poster": "https://res.cloudinary.com/startup-grind/image/upload/c_fill,w_500,h_500,g_center/c_fill,dpr_2.0,f_auto,g_center,q_auto:good/v1/gcs/platform-data-goog/events/WhatsApp%20Image%202024-09-27%20at%2003.02.09_msfU7tg.jpeg",
       "shortDesc": "Hands-on workshop covering modern web development techniques and best practices.",
       "communityLink": "https://community.dev/web-dev-workshop"
-    },
-    {
-      "name": "Mobile App Hackathon",
-      "poster": "https://via.placeholder.com/400x200.png?text=Mobile+App+Hackathon",
-      "shortDesc": "Collaborate with peers to build a mobile application in 48 hours!",
-      "communityLink": "https://community.dev/mobile-app-hackathon"
-    },
-    {
-      "name": "Data Science Bootcamp",
-      "poster": "https://via.placeholder.com/400x200.png?text=Data+Science+Bootcamp",
-      "shortDesc": "Join us for an intensive bootcamp on data science fundamentals.",
-      "communityLink": "https://community.dev/data-science-bootcamp"
-    },
-    {
-        "name": "Gen AI Study Jams",
-        "poster": "https://via.placeholder.com/400x200.png?text=Gen+AI+Study+Jams",
-        "shortDesc": "An event about AI that explores the latest developments in generative AI technologies.",
-        "communityLink": "https://community.dev/genai-study-jams"
-      },
-      {
-        "name": "Web Dev Workshop",
-        "poster": "https://via.placeholder.com/400x200.png?text=Web+Dev+Workshop",
-        "shortDesc": "Hands-on workshop covering modern web development techniques and best practices.",
-        "communityLink": "https://community.dev/web-dev-workshop"
-      },
-      {
-        "name": "Mobile App Hackathon",
-        "poster": "https://via.placeholder.com/400x200.png?text=Mobile+App+Hackathon",
-        "shortDesc": "Collaborate with peers to build a mobile application in 48 hours!",
-        "communityLink": "https://community.dev/mobile-app-hackathon"
-      },
-      {
-        "name": "Data Science Bootcamp",
-        "poster": "https://via.placeholder.com/400x200.png?text=Data+Science+Bootcamp",
-        "shortDesc": "Join us for an intensive bootcamp on data science fundamentals.",
-        "communityLink": "https://community.dev/data-science-bootcamp"
-      }
+    }
+   
   ]
   

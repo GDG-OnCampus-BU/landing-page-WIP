@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react"; // Ensure this line is only here once
+import React from "react"; 
 import { FaInstagram } from "react-icons/fa";
 import { FaWhatsapp } from "react-icons/fa";
 import { TbListDetails } from "react-icons/tb";
@@ -51,6 +51,7 @@ const hyperlinks = [
 const Links = () => {
   return (
     <div className="flex flex-col items-center p-4 gap-8">
+      
       {/* Heading for Links Section */}
       <h2 className="text-3xl font-bold text-white mb-4">Useful Links</h2>
 

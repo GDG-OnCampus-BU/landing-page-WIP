@@ -33,10 +33,8 @@ export default function Home() {
 
   return (
     <>
-      {/* Navbar */}
       <Navbar />
 
-      {/* First Section */}
       <div
         className="flex flex-col items-center justify-center min-h-screen p-8 pb-20 gap-8 sm:p-20 text-center"
         style={{
