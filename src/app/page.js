@@ -44,7 +44,7 @@ export default function Home() {
           backgroundPosition: "bottom",
         }}
       >
-        <h1 className="text-4xl sm:text-5xl font-bold text-white">
+        <h1 className="text-4xl sm:text-5xl font-bold text-zinc-900">
           We are GDG-BU
         </h1>
 
