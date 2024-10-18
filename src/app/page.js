@@ -1,15 +1,28 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import Navbar from "@/components/Navbar";
-import Links from "../components/Links";
+import EventsSection from "@/components/EventsSection";
+import Links from "@/components/Links";
+
 export default function Home() {
-  // Function to scroll to the section
+  const [eventsData, setEventsData] = useState([]);
+
+  useEffect(() => {
+    const fetchEventsData = async () => {
+      const response = await fetch("/data/events.json");
+      const data = await response.json();
+      setEventsData(data);
+    };
+
+    fetchEventsData();
+  }, []);
+
   const scrollToSection = () => {
     const section = document.getElementById("more-section");
     if (section) {
       section.scrollIntoView({ behavior: "smooth" });
       setTimeout(() => {
-        // this method is used to move down the nav when clicked on button.
         window.scrollBy({
           top: -1,
           behavior: "smooth",
@@ -21,7 +34,7 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      {/* First Section */}
+
       <div
         className="flex flex-col items-center justify-center min-h-screen p-8 pb-20 gap-8 sm:p-20 text-center"
         style={{
@@ -46,15 +59,14 @@ export default function Home() {
       {/* Second Section */}
       <div
         id="more-section"
-        className="flex flex-col items-center justify-center min-h-screen p-8 pb-20 gap-8 sm:p-20 text-center"
+        className="flex flex-col items-center justify-center min-h-screen p-8 pb-20 gap-8 sm:p-50 text-center"
       >
-        <h2 className="text-3xl sm:text-4xl font-bold text-gray-800">
-          Welcome to the next section!
-        </h2>
-        <Links></Links>
-        <p className="text-lg sm:text-xl text-gray-600">
-          Here&apos;s more information about GDG-BU and what we do.
-        </p>
+        <EventsSection events={eventsData} />
+      </div>
+
+      {/* Links Section */}
+      <div className="bg-gray-900 py-12">
+        <Links />
       </div>
     </>
   );

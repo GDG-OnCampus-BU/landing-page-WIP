@@ -13,10 +13,6 @@ export default function Loader() {
           />
         </div>
       </div>
-      {/*       
-      <h1 className="mt-8 text-2xl font-semibold text-white">
-        <span className="animate-dots"></span>
-      </h1> */}
     </div>
   );
 }

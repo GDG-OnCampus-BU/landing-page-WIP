@@ -1,0 +1,22 @@
+[
+    {
+      "name": "Hacktober Fest - Bennett University",
+      "poster": "https://res.cloudinary.com/startup-grind/image/upload/c_scale,w_2560/c_crop,h_640,w_2560,y_0.1_mul_h_sub_0.1_mul_640/c_crop,h_640,w_2560/c_fill,dpr_2.0,f_auto,g_center,q_auto:good/v1/gcs/platform-data-goog/event_banners/story%20%281%29_gKjrKjJ.jpg",
+      "shortDesc": "We at GDG On Campus-Bennett University bring to you all Hacktober Fest!! Exclusively for beginners, to help you hop on to the contribution spree with GDG BU and step a foot into your OSS journey (Internal Event).",
+      "communityLink": "https://gdg.community.dev/events/details/google-gdg-on-campus-bennett-university-greater-noida-india-presents-hacktober-fest-bennett-university/"
+    },
+    {
+      "name": "Gen AI Study Jam - Info Session",
+      "poster": "https://res.cloudinary.com/startup-grind/image/upload/c_fill,w_500,h_500,g_center/c_fill,dpr_2.0,f_auto,g_center,q_auto:good/v1/gcs/platform-data-goog/events/WhatsApp%20Image%202024-09-27%20at%2003.02.09_msfU7tg.jpeg",
+      "shortDesc": "Hands-on workshop covering modern web development techniques and best practices.",
+      "communityLink": "https://gdg.community.dev/events/details/google-gdg-on-campus-bennett-university-greater-noida-india-presents-gen-ai-study-jam-info-session-build-with-ai/"
+    },
+    {
+      "name": "GDG BU Infosession [Previously GDSC BU]",
+      "poster": "https://res.cloudinary.com/startup-grind/image/upload/c_scale,w_2560/c_crop,h_640,w_2560,y_0.47_mul_h_sub_0.47_mul_640/c_crop,h_640,w_2560/c_fill,dpr_2.0,f_auto,g_center,q_auto:good/v1/gcs/platform-data-goog/event_banners/GDG-OC-Evergreen-horizontal-White_puqYfyI.png",
+      "shortDesc": "This is an info-session for freshers and on campus developers to let them know what GDG on campus BU is about.",
+      "communityLink": "https://gdg.community.dev/events/details/google-gdg-on-campus-bennett-university-greater-noida-india-presents-gdg-bu-infosession-previously-gdsc-bu/"
+    }
+   
+  ]
+  

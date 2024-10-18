@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 
-
-export default function  Navbar () {
+export default function Navbar() {
   const [visible, setVisible] = useState(false);
   const [scrollPosition, setScrollPosition] = useState(0);
 
@@ -11,9 +10,9 @@ export default function  Navbar () {
       const currentScrollPos = window.scrollY;
 
       if (currentScrollPos > scrollPosition) {
-        setVisible(false); //scrolling down
+        setVisible(false);
       } else {
-        setVisible(true); //scrolling up
+        setVisible(true);
       }
 
       setScrollPosition(currentScrollPos);
@@ -36,13 +35,14 @@ export default function  Navbar () {
             className="flex items-center space-x-3 rtl:space-x-reverse"
           >
             <Image
-              src="https://flowbite.com/docs/images/logo.svg"
-              alt="Flowbite Logo"
+              src="/assets/logo_gdg.png"
+              alt="GDG Logo"
               width={32}
               height={32}
             />
+
             <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-              Flowbite
+              GDG Bennett University
             </span>
           </a>
           <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
@@ -121,4 +121,4 @@ export default function  Navbar () {
       </nav>
     </>
   );
-};
+}

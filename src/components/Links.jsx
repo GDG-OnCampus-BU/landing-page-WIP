@@ -19,14 +19,14 @@ const hyperlinks = [
   {
     name: "Junior Core Forms",
     href: "https://forms.gle/AGnZKZiE1SjMPLpw8",
-    icon: <TbListDetails className="w-8 h-8 text-violet-400"></TbListDetails>,
+    icon: <TbListDetails className="w-8 h-8 text-violet-400" />,
     bgcolor:
       "text-violet-400 border-2 border-violet-400 hover:bg-violet-400/15",
   },
   {
     name: "Whatsapp",
     href: "https://chat.whatsapp.com/Coiz2mWaHIQJs1c91jrYsB",
-    icon: <FaWhatsapp className="w-8 h-8 text-emerald-400"></FaWhatsapp>,
+    icon: <FaWhatsapp className="w-8 h-8 text-emerald-400" />,
     bgcolor:
       "text-emerald-400 border-2 border-emerald-400 hover:bg-emerald-400/15",
   },
@@ -40,42 +40,44 @@ const hyperlinks = [
     name: "Community.dev",
     href: "https://gdg.community.dev/gdg-on-campus-bennett-university-greater-noida-india/",
     icon: (
-      <p className="font-mono text-sky-400 font-bold w-8 h-8 text-3xl bg-transparent  flex justify-center items-center">
+      <p className="font-mono text-sky-400 font-bold w-8 h-8 text-3xl bg-transparent flex justify-center items-center">
         &lt;&gt;
       </p>
     ),
     bgcolor: "text-sky-400 border-2 border-sky-400 hover:bg-sky-400/15",
   },
 ];
+
 const Links = () => {
   return (
-    <div className="flex md:flex-row md:justify-around flex-col items-center p-4 gap-8">
-      {hyperlinks.map((link, index) => {
-        return (
+    <div className="flex flex-col items-center p-4 gap-8">
+      {/* Heading for Links Section */}
+      <h2 className="text-3xl font-bold text-white mb-4">Useful Links</h2>
+
+      <div className="flex md:flex-row md:justify-around flex-col items-center gap-8">
+        {hyperlinks.map((link, index) => (
           <Link
             key={index}
             name={link.name}
             href={link.href}
             icon={link.icon}
             bgcolor={link.bgcolor}
-          ></Link>
-        );
-      })}
+          />
+        ))}
+      </div>
     </div>
   );
 };
 
-export default Links;
-
 const Link = ({ name, href, icon, bgcolor }) => {
   return (
-    <a href={href} target="_blank">
+    <a href={href} target="_blank" rel="noopener noreferrer">
       <div
-        className={` ${bgcolor} bg-transparent hover:scale-110  transform translate duration-300 ease-in-out  w-80 justify-between md:w-fit min-h-fit py-4 flex md:justify-around gap-x-6 items-center px-5 py- rounded-2xl`}
+        className={`${bgcolor} bg-transparent hover:scale-110 transform translate duration-300 ease-in-out w-80 justify-between md:w-fit min-h-fit py-4 flex md:justify-around gap-x-6 items-center px-5 rounded-2xl`}
       >
         {icon}
         <p
-          className={` text-lg text-nowrap md:text-xl lg:text-2xl font-medium block md:hidden lg:block`}
+          className={`text-lg text-nowrap md:text-xl lg:text-2xl font-medium block md:hidden lg:block`}
         >
           {name}
         </p>
@@ -83,3 +85,5 @@ const Link = ({ name, href, icon, bgcolor }) => {
     </a>
   );
 };
+
+export default Links;
