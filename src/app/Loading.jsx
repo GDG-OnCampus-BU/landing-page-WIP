@@ -24,7 +24,7 @@ export default function LoadingScreen() {
     <div className="fixed inset-0 flex items-center justify-center bg-white z-50">
       <div className="animate-spin">
         <Image
-          src={publicPath+"assets/logo_gdg.png"}
+          src={publicPath+"/assets/logo_gdg.png"}
           alt="GDG Logo"
           width={50}
           height={25}
