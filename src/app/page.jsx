@@ -38,7 +38,7 @@ export default function Home() {
         className="flex flex-col items-center justify-center min-h-screen p-8 pb-20 gap-8 sm:p-20 text-center"
         style={{
           // we are hardcoding the image url here due to gh pages and next contraints
-          backgroundImage: `url('https://gdg-oncampus-bu.github.io/landing-page-WIP/assets/image1.png')`,
+          backgroundImage: `url('https://gdg-oncampus-bu.github.io/landing-page/assets/image1.png')`,
           backgroundSize: "contain",
           backgroundRepeat: "no-repeat",
           backgroundPosition: "bottom",
