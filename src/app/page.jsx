@@ -6,11 +6,11 @@ import EventsSection from "@/components/EventsSection";
 import Links from "@/components/Links";
 
 export default function Home() {
+  const publicPath = process.env.NEXT_PUBLIC_PUBLIC_PATH ;
   const [eventsData, setEventsData] = useState([]);
-
   useEffect(() => {
     const fetchEventsData = async () => {
-      const response = await fetch("/data/events.json");
+      const response = await fetch(publicPath+"/data/events.json");
       const data = await response.json();
       setEventsData(data);
     };
@@ -30,7 +30,6 @@ export default function Home() {
       }, 600);
     }
   };
-
   return (
     <>
       <Navbar />
@@ -38,7 +37,8 @@ export default function Home() {
       <div
         className="flex flex-col items-center justify-center min-h-screen p-8 pb-20 gap-8 sm:p-20 text-center"
         style={{
-          backgroundImage: `url('/assets/image1.png')`,
+          // we are hardcoding the image url here due to gh pages and next contraints
+          backgroundImage: `url('https://gdg-oncampus-bu.github.io/landing-page-WIP/assets/image1.png')`,
           backgroundSize: "contain",
           backgroundRepeat: "no-repeat",
           backgroundPosition: "bottom",

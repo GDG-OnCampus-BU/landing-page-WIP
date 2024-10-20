@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
-import gdg_logo from "../../public/assets/logo_gdg.png";
 
 export default function Navbar() {
+  const public_path = process.env.NEXT_PUBLIC_PUBLIC_PATH
   const [visible, setVisible] = useState(false);
   const [scrollPosition, setScrollPosition] = useState(0);
 
@@ -36,7 +36,7 @@ export default function Navbar() {
             className="flex items-center space-x-3 rtl:space-x-reverse"
           >
             <Image
-              src={gdg_logo}
+              src={public_path + "/assets/logo_gdg.png"}
               alt="GDG Logo"
               width={32}
               height={32}
