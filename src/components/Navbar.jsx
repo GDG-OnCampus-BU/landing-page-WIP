@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
+import gdg_logo from "../../public/assets/logo_gdg.png";
 
 export default function Navbar() {
   const [visible, setVisible] = useState(false);
@@ -35,7 +36,7 @@ export default function Navbar() {
             className="flex items-center space-x-3 rtl:space-x-reverse"
           >
             <Image
-              src="/assets/logo_gdg.png"
+              src={gdg_logo}
               alt="GDG Logo"
               width={32}
               height={32}
