@@ -10,7 +10,7 @@ const hyperlinks = [
     name: "Hacktoberfest'24 Repos",
     href: "https://github.com/GDG-OnCampus-BU/HacktoberFest/",
     icon: (
-      <p className="font-mono text-lime-400 font-bold w-8 h-8 text-3xl text-center align-middle bg-transparent italic">
+      <p className="font-mono text-lime-400 font-bold w-8 h-8 text-3xl text-center bg-transparent italic">
         H
       </p>
     ),
@@ -40,7 +40,7 @@ const hyperlinks = [
     name: "Community.dev",
     href: "https://gdg.community.dev/gdg-on-campus-bennett-university-greater-noida-india/",
     icon: (
-      <p className="font-mono text-sky-400 font-bold w-8 h-8 text-3xl bg-transparent flex justify-center items-center">
+      <p className="font-mono text-sky-400 font-bold w-8 h-8 text-3xl flex justify-center items-center">
         &lt;&gt;
       </p>
     ),
@@ -50,11 +50,13 @@ const hyperlinks = [
 
 const Links = () => {
   return (
-    <div className="flex flex-col items-center p-4 gap-8">
+    <div className="flex flex-col items-center p-4 gap-8 w-full">
       {/* Heading for Links Section */}
-      <h2 className="text-3xl font-bold text-white mb-4">Useful Links</h2>
+      <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
+        Useful Links
+      </h2>
 
-      <div className="flex md:flex-row md:justify-around flex-col items-center gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 w-full">
         {hyperlinks.map((link, index) => (
           <Link
             key={index}
@@ -71,13 +73,18 @@ const Links = () => {
 
 const Link = ({ name, href, icon, bgcolor }) => {
   return (
-    <a href={href} target="_blank" rel="noopener noreferrer">
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className={`transform hover:scale-105 transition-transform duration-300 ease-in-out`}
+    >
       <div
-        className={`${bgcolor} bg-transparent hover:scale-110 transform translate duration-300 ease-in-out w-80 justify-between md:w-fit min-h-fit py-4 flex md:justify-around gap-x-6 items-center px-5 rounded-2xl`}
+        className={`${bgcolor} bg-transparent border rounded-2xl p-4 flex items-center justify-between gap-x-6 md:flex-col md:items-center md:gap-y-4`}
       >
         {icon}
         <p
-          className={`text-lg text-nowrap md:text-xl lg:text-2xl font-medium block md:hidden lg:block`}
+          className={`text-base md:text-lg lg:text-xl font-medium text-center`}
         >
           {name}
         </p>
